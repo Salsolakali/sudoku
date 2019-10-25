@@ -3,14 +3,19 @@ package com.example.sudoku
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.navigation.findNavController
 import com.example.sudoku.algorithm.Board
 import com.example.sudoku.algorithm.Solver
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val navController = findNavController(R.id.nav_host_fragment)
+
         var sudoku = arrayOf(
             intArrayOf(8,6,0,0,2,0,0,0,0),
             intArrayOf(0,0,0,7,0,0,0,5,9),
