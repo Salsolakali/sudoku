@@ -20,7 +20,16 @@
     </fragment>
     <fragment
         android:id="@+id/cameraFragment"
-        android:name="com.example.sudoku.CameraFragment"
+        android:name="com.example.sudoku.camera.CameraFragment"
         android:label="fragment_camera"
-        tools:layout="@layout/fragment_camera" />
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_solutionFragment"
+            app:destination="@id/solutionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/solutionFragment"
+        android:name="com.example.sudoku.SolutionFragment"
+        android:label="fragment_solution"
+        tools:layout="@layout/fragment_solution" />
 </navigation>
